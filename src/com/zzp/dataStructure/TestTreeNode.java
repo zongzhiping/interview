@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * Created by zzy on 2017/7/23.
  */
-public class Test {
+public class TestTreeNode {
     public static void main(String args[]){
         TreeNode<String> D = new TreeNode<String>("D", null, null);
         TreeNode<String> H = new TreeNode<String>("H", null, null);
