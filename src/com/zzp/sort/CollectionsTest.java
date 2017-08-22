@@ -59,35 +59,68 @@ public class CollectionsTest {
 //            System.out.println(s);
 //        }
 
-        System.out.println("/*****************************map遍历*******************************/");
-        /*****************************map遍历*******************************/
-        Map<String,String> map = new HashMap<String,String>();
-        map.put("a","张三");
-        map.put("b","李四");
-        map.put("c","王五");
+//        System.out.println("/*****************************map遍历*******************************/");
+//        /*****************************map遍历*******************************/
+//        Map<String,String> map = new HashMap<String,String>();
+//        map.put("a","张三");
+//        map.put("b","李四");
+//        map.put("c","王五");
+//
+//        for(Object o : map.keySet()){
+//            System.out.println(o+" "+map.get(o));
+//        }
+//
+//        for(Object o : map.values()){
+//            System.out.println(o);
+//        }
+//
+//        for(Object e:map.entrySet()){
+//            Map.Entry entry = (Map.Entry)e;
+//            System.out.println(entry.getKey()+" "+entry.getValue());
+//        }
+//
+//       for(Map.Entry<String,String> e: map.entrySet()){
+//            System.out.println(e.getKey()+" "+e.getValue());
+//       }
+//
+//       Iterator<Map.Entry<String,String>> it2 = map.entrySet().iterator();
+//        while(it2.hasNext()){
+//            Map.Entry m = it2.next();
+//            System.out.println(m.getKey()+" "+m.getValue());
+//        }
 
-        for(Object o : map.keySet()){
-            System.out.println(o+" "+map.get(o));
+        /*****************************hashable遍历*******************************/
+        System.out.println("/*****************************hashable遍历*******************************/");
+        Hashtable ht = new Hashtable();
+        ht.put("1","张三");
+        ht.put("2","李四");
+        ht.put("3","王五");
+
+        Iterator its = ht.entrySet().iterator();
+        while (its.hasNext()){
+            Map.Entry entry = (Map.Entry) its.next();
+            System.out.println("key: "+entry.getKey()+" ,value: "+entry.getValue());
         }
 
-        for(Object o : map.values()){
-            System.out.println(o);
+        Iterator its2 = ht.keySet().iterator();
+        while(its2.hasNext()){
+            String key = (String)its2.next();
+            System.out.println("key: "+key+",values: "+ht.get(key));
         }
 
-        for(Object e:map.entrySet()){
-            Map.Entry entry = (Map.Entry)e;
-            System.out.println(entry.getKey()+" "+entry.getValue());
+        Collection c = ht.values();
+        System.out.println(c);
+
+        Enumeration e = ht.keys();
+        while(e.hasMoreElements()){
+            System.out.println(e.nextElement());
         }
 
-       for(Map.Entry<String,String> e: map.entrySet()){
-            System.out.println(e.getKey()+" "+e.getValue());
-       }
-
-       Iterator<Map.Entry<String,String>> it2 = map.entrySet().iterator();
-        while(it2.hasNext()){
-            Map.Entry m = it2.next();
-            System.out.println(m.getKey()+" "+m.getValue());
+        Enumeration ee = ht.elements();
+        while (ee.hasMoreElements()){
+            System.out.println(ee.nextElement());
         }
+
 
     }
 }

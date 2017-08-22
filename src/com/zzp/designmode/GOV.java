@@ -12,6 +12,7 @@ package com.zzp.designmode;
 }*/
 
 
+/*
 public class GOV{
     private static GOV gov = null;
     private GOV(){}
@@ -25,6 +26,30 @@ public class GOV{
         }
         return gov;
     }
+}*/
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
